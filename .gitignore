@@ -42,6 +42,8 @@ ENV/
 # Jupyter Notebook
 .ipynb_checkpoints
 *.ipynb
+!model training/
+!model training/biomedical-waste-segregation-latest.ipynb
 
 # PyCharm
 .idea/
