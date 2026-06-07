@@ -1,0 +1,18 @@
+# AI-Based Medical Waste Segregation Monitoring System - Requirements
+# Python 3.10+ compatible
+
+# Core Computer Vision & Deep Learning
+ultralytics>=8.2.0          # YOLOv11 and inference framework
+opencv-python>=4.8.0        # OpenCV library for image rendering and webcam interface
+torch>=2.0.0                # PyTorch backend for YOLO inference
+torchvision>=0.15.0         # Torchvision utility functions
+
+# Data manipulation and analytics
+numpy>=1.24.0               # Numerical computing backend
+pandas>=2.0.0               # CSV log compilation and structuring for Power BI
+matplotlib>=3.7.0           # Trend plotting and report generation utilities
+
+# General Utilities
+pyyaml>=6.0                 # Parsing dataset definitions and configurations
+Pillow>=10.0.0              # Image format decoding/saving fallback
+pathlib                     # Object-oriented filesystem path utilities
