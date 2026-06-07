@@ -807,12 +807,10 @@ if is_edge_case(detection):
 ## 📄 License & Citation
 
 **Project:** AI-Based Medical Waste Segregation Monitoring System  
-**Author:** Anush Ramesh
-**Version:** 1.0 (Milestone 3)  
-**Date:** 2024
+**Author:** Anush Ramesh 
 
 ---
 
-**Last Updated:** 2024-06-06  
+**Last Updated:** June 2026  
 
 ---
