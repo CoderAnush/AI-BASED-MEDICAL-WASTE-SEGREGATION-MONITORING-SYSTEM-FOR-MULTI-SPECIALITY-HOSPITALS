@@ -41,9 +41,7 @@ ENV/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-*.ipynb
-!model training/
-!model training/biomedical-waste-segregation-latest.ipynb
+
 
 # PyCharm
 .idea/
@@ -61,7 +59,7 @@ runs/
 *.pth
 
 # Output and Logs
-output_images/
+# output_images/
 *.log
 waste_log.csv
 waste_report.txt
