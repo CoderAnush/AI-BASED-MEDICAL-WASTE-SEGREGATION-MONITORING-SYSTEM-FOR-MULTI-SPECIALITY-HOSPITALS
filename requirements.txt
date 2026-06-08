@@ -12,6 +12,9 @@ numpy>=1.24.0               # Numerical computing backend
 pandas>=2.0.0               # CSV log compilation and structuring for Power BI
 matplotlib>=3.7.0           # Trend plotting and report generation utilities
 
+# Web Application Frontend
+streamlit>=1.30.0           # Web application framework
+
 # General Utilities
 pyyaml>=6.0                 # Parsing dataset definitions and configurations
 Pillow>=10.0.0              # Image format decoding/saving fallback
