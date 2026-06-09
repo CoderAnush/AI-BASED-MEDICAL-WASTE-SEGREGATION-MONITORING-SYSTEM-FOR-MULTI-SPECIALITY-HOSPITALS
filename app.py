@@ -356,8 +356,8 @@ with tab3:
         st.info("ℹ️ No logs recorded yet. Run detections to generate statistics.")
     else:
         try:
-            # Read CSV
-            df = pd.read_csv(csv_path)
+            # Read CSV, skipping any malformed lines to prevent crashes
+            df = pd.read_csv(csv_path, on_bad_lines='skip')
             
             # Remove any trailing empty rows
             df = df.dropna(subset=["Waste_ID"])
@@ -489,7 +489,7 @@ with tab4:
     total_records = 0
     if csv_path.exists():
         try:
-            df_records = pd.read_csv(csv_path)
+            df_records = pd.read_csv(csv_path, on_bad_lines='skip')
             total_records = len(df_records.dropna(subset=["Waste_ID"]))
         except Exception:
             pass
