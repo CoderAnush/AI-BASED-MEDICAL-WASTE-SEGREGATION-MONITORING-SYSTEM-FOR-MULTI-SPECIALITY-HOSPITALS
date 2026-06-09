@@ -109,10 +109,10 @@ with tab1:
         if uploaded_file is not None:
             # Display uploaded image preview
             image = Image.open(uploaded_file)
-            st.image(image, caption="Uploaded Image Preview", use_container_width=True)
+            st.image(image, caption="Uploaded Image Preview", width="stretch")
             
             # Analyze button
-            analyze_btn = st.button("🔍 Analyze Waste", type="primary", use_container_width=True)
+            analyze_btn = st.button("🔍 Analyze Waste", type="primary", width="stretch")
     
     with col2:
         if uploaded_file is not None and 'analyze_btn' in locals() and analyze_btn:
@@ -135,7 +135,7 @@ with tab1:
                 
                 # Display Annotated Image
                 annotated_rgb = cv2.cvtColor(annotated_bgr, cv2.COLOR_BGR2RGB)
-                st.image(annotated_rgb, caption="Annotated Detections (YOLOv11)", use_container_width=True)
+                st.image(annotated_rgb, caption="Annotated Detections (YOLOv11)", width="stretch")
                 
                 # Section 4: Detection Results Table
                 if detections:
@@ -152,7 +152,7 @@ with tab1:
                         })
                     
                     df_detections = pd.DataFrame(table_data)
-                    st.dataframe(df_detections, use_container_width=True, hide_index=True)
+                    st.dataframe(df_detections, width="stretch", hide_index=True)
                     
                     # Section 5: Summary Card
                     st.markdown("<br>", unsafe_allow_html=True)
@@ -219,8 +219,8 @@ with tab2:
     with col1:
         # Control Buttons
         st.markdown("#### Stream Controls")
-        start_btn = st.button("📹 Start Live Detection", type="primary", use_container_width=True, disabled=st.session_state.webcam_running)
-        stop_btn = st.button("🛑 Stop Live Detection", type="secondary", use_container_width=True, disabled=not st.session_state.webcam_running)
+        start_btn = st.button("📹 Start Live Detection", type="primary", width="stretch", disabled=st.session_state.webcam_running)
+        stop_btn = st.button("🛑 Stop Live Detection", type="secondary", width="stretch", disabled=not st.session_state.webcam_running)
         
         if start_btn:
             st.session_state.webcam_running = True
@@ -326,7 +326,7 @@ with tab2:
                         
                         # Render frame
                         rgb_frame = cv2.cvtColor(annotated_frame, cv2.COLOR_BGR2RGB)
-                        frame_placeholder.image(rgb_frame, channels="RGB", use_container_width=True)
+                        frame_placeholder.image(rgb_frame, channels="RGB", width="stretch")
                         
                         # Short sleep to give control back to system
                         time.sleep(0.01)
@@ -445,7 +445,7 @@ with tab3:
             # Display interactive sortable table
             st.dataframe(
                 display_df, 
-                use_container_width=True, 
+                width="stretch", 
                 hide_index=True,
                 column_config={
                     "Waste_ID": st.column_config.TextColumn("Waste ID", width="small"),
@@ -465,7 +465,7 @@ with tab3:
                 data=csv_data,
                 file_name="waste_log.csv",
                 mime="text/csv",
-                use_container_width=True
+                width="stretch"
             )
             
         except Exception as e:
@@ -502,7 +502,7 @@ with tab4:
         st.markdown(f"**Total Records Available:** `{total_records}`")
         
         # Local Folder Opener
-        open_folder = st.button("📂 Open Dashboard Folder", use_container_width=True)
+        open_folder = st.button("📂 Open Dashboard Folder", width="stretch")
         if open_folder:
             try:
                 # Windows command to open directory
