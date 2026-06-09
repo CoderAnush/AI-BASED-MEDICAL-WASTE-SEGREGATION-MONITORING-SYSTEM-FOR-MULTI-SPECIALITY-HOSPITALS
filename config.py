@@ -5,7 +5,7 @@ Centralized configuration management for all system parameters.
 Allows easy adjustment of detection thresholds, paths, and settings.
 
 Author: AI-Based Medical Waste Segregation System
-Version: 1.1
+
 """
 
 import os
