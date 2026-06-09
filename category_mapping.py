@@ -4,7 +4,6 @@ Biomedical Waste Category and Bin Mapping Module
 This module provides functions to map detected waste items to their biomedical
 waste categories and recommended disposal bins according to system design guidelines.
 
-Author: AI-Based Medical Waste Segregation System
 """
 
 from typing import Tuple, Dict, List
